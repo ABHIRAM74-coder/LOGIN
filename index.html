@@ -1,23 +1,117 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
-    
-        <linkrel="stylesheet" href="style.css">
-    
+
+    <style>
+        /* Page styling */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        /* Login box */
+        .login-box {
+            width: 350px;
+            padding: 30px;
+
+            background: white;
+            border-radius: 10px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: 25px;
+        }
+
+        /* Input fields */
+        input {
+            width: 100%;
+            padding: 12px;
+
+            margin: 10px 0;
+
+            box-sizing: border-box;
+
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Buttons */
+        button {
+            padding: 12px 20px;
+            margin: 15px 5px 10px;
+
+            border: none;
+            border-radius: 5px;
+
+            background: #007bff;
+            color: white;
+
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #signupBtn {
+            background: #28a745;
+        }
+
+        #signupBtn:hover {
+            background: #1e7e34;
+        }
+
+        /* Message */
+        #message {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <input type="email" id="email" placeholder="Email">
+    <div class="login-box">
 
-    <input type="password" id="password" placeholder="Password">
+        <h2>Login</h2>
 
-    <button id="loginBtn">Login</button>
-    <button id="signupBtn">Sign Up</button>
+        <input type="email" id="email" placeholder="Email">
 
-    <p id="message"></p>
+        <input type="password" id="password" placeholder="Password">
+
+        <div>
+            <button id="loginBtn">Login</button>
+            <button id="signupBtn">Sign Up</button>
+        </div>
+
+        <p id="message"></p>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script src="script.js"></script>
 
 </body>

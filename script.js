@@ -103,6 +103,6 @@ loginBtn.addEventListener(
         );
 
         window.location.href =
-            "https://ecommerceqwe.vercel.app/";
+            "https://jocular-smakager-082ffa.netlify.app/";
     }
 );
