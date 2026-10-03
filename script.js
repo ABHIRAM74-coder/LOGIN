@@ -94,15 +94,26 @@ loginBtn.addEventListener(
             return;
         }
 
-        message.textContent =
-            "Login successful.";
+        const allowedEmail =
+            "vsuryaabhiram@gmail.com";
 
-        console.log(
-            "Login data:",
-            data
-        );
+        if (
+            data.user.email.toLowerCase() ===
+            allowedEmail.toLowerCase()
+        ) {
 
-        window.location.href =
-            "https://jocular-smakager-082ffa.netlify.app/";
+            message.textContent =
+                "Login successful.";
+
+            window.location.href =
+                "https://jocular-smakager-082ffa.netlify.app/";
+
+        } else {
+
+            message.textContent =
+                "You are not allowed to open this page.";
+
+            await supabaseClient.auth.signOut();
+        }
     }
 );
