@@ -106,7 +106,7 @@ loginBtn.addEventListener(
                 "Login successful.";
 
             window.location.href =
-                "https://jocular-smakager-082ffa.netlify.app/";
+                "https://familykitdemo.vercel.app/";
 
         } else {
 
