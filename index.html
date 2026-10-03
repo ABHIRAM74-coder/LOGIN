@@ -1,44 +1,59 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Login</title>
 
     <style>
-        /* Page styling */
         body {
             margin: 0;
-            padding: 0;
-            height: 100vh;
+            padding: 20px;
+
+            min-height: 100vh;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
+            box-sizing: border-box;
+
             font-family: Arial, sans-serif;
+
             background: #f2f2f2;
         }
 
-        /* Login box */
         .login-box {
-            width: 350px;
+            width: 90%;
+            max-width: 350px;
+
             padding: 30px;
 
+            box-sizing: border-box;
+
             background: white;
+
             border-radius: 10px;
 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.2);
 
             text-align: center;
         }
 
         .login-box h2 {
+            margin-top: 0;
             margin-bottom: 25px;
+
+            font-size: 28px;
         }
 
-        /* Input fields */
         input {
             width: 100%;
+
             padding: 12px;
 
             margin: 10px 0;
@@ -56,10 +71,16 @@
             outline: none;
         }
 
-        /* Buttons */
+        .button-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            margin-top: 10px;
+        }
+
         button {
             padding: 12px 20px;
-            margin: 15px 5px 10px;
 
             border: none;
             border-radius: 5px;
@@ -68,6 +89,7 @@
             color: white;
 
             font-size: 15px;
+
             cursor: pointer;
         }
 
@@ -83,10 +105,40 @@
             background: #1e7e34;
         }
 
-        /* Message */
         #message {
             margin-top: 15px;
+
             font-size: 14px;
+
+            min-height: 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .login-box {
+                width: 100%;
+                max-width: 380px;
+
+                padding: 20px;
+            }
+
+            .login-box h2 {
+                font-size: 24px;
+            }
+
+            .button-box {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -97,20 +149,38 @@
 
         <h2>Login</h2>
 
-        <input type="email" id="email" placeholder="Email">
+        <input
+            type="email"
+            id="email"
+            placeholder="Email"
+        >
 
-        <input type="password" id="password" placeholder="Password">
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
 
-        <div>
-            <button id="loginBtn">Login</button>
-            <button id="signupBtn">Sign Up</button>
+        <div class="button-box">
+
+            <button id="loginBtn">
+                Login
+            </button>
+
+            <button id="signupBtn">
+                Sign Up
+            </button>
+
         </div>
 
         <p id="message"></p>
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+    </script>
 
     <script src="script.js"></script>
 
