@@ -106,7 +106,7 @@ loginBtn.addEventListener(
                 "Login successful.";
 
             window.location.href =
-                "https://familykitdemo.vercel.app/";
+                "https://familykitvault.vercel.app/";
 
         } else {
 
